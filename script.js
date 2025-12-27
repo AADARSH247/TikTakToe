@@ -56,13 +56,13 @@ const showWinner=(winner)=>{
 
 const checkwinner = () => {
   for (let pattern of winPatterns) {
-    let pos1Value = boxes[pattern[0]].innerText;
+    let pos1Value = boxes[pattern[0]].innerText;  // here the value of pattern goes one by one... and the value in the pattern index is placed with a value..
     let pos2Value = boxes[pattern[1]].innerText;
     let pos3Value = boxes[pattern[2]].innerText;
 
     if (pos1Value != "" && pos2Value != "" && pos3Value != "") {
       if (pos1Value === pos2Value && pos2Value === pos3Value) {
-        console.log("Winner",pos1Value);
+        
 
         showWinner(pos1Value);
       }
